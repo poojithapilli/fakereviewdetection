@@ -1,19 +1,19 @@
 # fakereviewdetection
 
-1. Collect the data of labelled reviews.
+##1. Collect the data of labelled reviews.
 
 we were able to find a labelled dataset on 
 kaggle provided by Amazon. The dataset contains a total of 21,000 reviews in which 
 50% are fake reviews and 50% are genuine reviews.
 
-2. Preprocessing the dataset.
+##2. Preprocessing the dataset.
  
 In real-life human writable text data 
 contain various words with the wrong spelling, short words, special symbols, emojis, 
 etc. we need to clean this kind of noisy text data before feeding it to the machine 
 learning model.
 
-3. Feature extraction.
+##3. Feature extraction.
 
 Variety of features that have been proposed and used separately by supervised 
 approaches to identify fake reviews; which are review centric and reviewer centric 
@@ -37,13 +37,13 @@ it.
 as suggests that reviews written by spammers are very short and defame/promote the 
 product
 
-4. LabelEncoding.
+##4. LabelEncoding.
 
 It is used for converting labels into the numeric form from machine-readable form.
 The algorithm will decide how the labels are operated. It is an important preprocessing 
 step for the structured dataset.
 
-5. Count Vectorising the features.
+##5. Count Vectorising the features.
 
 The CountVectorizer function provided by sklearn in python is used to represent the 
 corpus of words using a sparse matrix where each word acts as a column and the review 
@@ -51,7 +51,7 @@ as a row having the most frequent 1400 words from the corpus. This sparse matrix
 1400 most frequent words is used as a feature vector to the model along with the verified 
 purchase, rating and review length of the product.
 
-6. Training the logistic regression model and hyperparameter tuning.
+##6. Training the logistic regression model and hyperparameter tuning.
 
 Logistic regression model was trained on the train data for CountVectorizer using 
 LogisticRegression in sklearn. Followed by this, hyperparameters of the model were 
@@ -59,7 +59,7 @@ tuned using GridSearch. Following is the list of optimal hyperparameters that re
 best accuracy: C = 1, penalty = ‘l2’, solver = ‘newton-cg’.
 
 
-7. Evaluating the model on Test data.
+##7. Evaluating the model on Test data.
 
 Here the accuracy is upto 81% by using Logistic Regression Model for classification.
 
